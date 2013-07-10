@@ -12,6 +12,17 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://raw.github.com/mcoms/jquery-raptorize-coffee/master/modernizr.js"></script>
+    <script src="https://raw.github.com/mcoms/jquery-raptorize-coffee/master/build/jquery-raptorize.js"></script>
+    
+    <script type="text/javascript">
+      $(function(){
+        $('body').raptorize({ "enterOn": "konami-code" });
+        $('#raptor-button').raptorize();
+      });
+    </script>
   </head>
   <body>
     <div class="wrapper">
@@ -36,6 +47,12 @@
 <p>Inspired by and compatable with ZURB's jQuery Raptorize Plugin 1.0 (<a href="http://www.ZURB.com/playground">http://www.ZURB.com/playground</a>).  This is an API-compatible re-write of their plugin to support newer jQuery versions.  It's written in <a href="http://coffeescript.org/">CoffeeScript</a>.</p>
 
 <p>Depends upon <a href="http://modernizr.com/">Modernizr</a> with HTML5 Audio detection enabled.</p>
+
+<p>
+  <strong>Demo:</strong> Try the Konami Code (up up down down left right left right b a) or...
+  <br /><br />
+  <button id="raptor-button">Click for Raptor.</button>
+</p>
 
 <h1>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h1>
