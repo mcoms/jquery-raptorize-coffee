@@ -12,6 +12,14 @@ You'll need jQuery, a build of [Modernizr](http://modernizr.com/) with HTML5 Aud
 
 You'll also need the raptor assets in the `images` and `sounds` directories.
 
+## Installing via Bower
+
+You can install the package automatically using [Bower](http://bower.io/).
+
+```zsh
+bower install jquery-raptorize-coffee
+```
+
 ## Basic web page
 ```html
 <!DOCTYPE html>
