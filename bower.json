@@ -1,0 +1,26 @@
+{
+  "name": "jquery-raptorize-coffee",
+  "description": "Inspired by and compatable with ZURB's jQuery Raptorize Plugin, this is a CoffeeScript rewrite compatible with newer jQuery versions.",
+  "version": "2.0",
+  "main": "jquery-raptorize.coffee",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery":"~1.10.2",
+    "modernizr": "~2.6.2"
+  },
+  "author": {
+    "name": "mcoms",
+    "url": "https://github.com/mcoms"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcoms/jquery-raptorize-coffee.git"
+  }
+}
