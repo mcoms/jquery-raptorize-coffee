@@ -12,7 +12,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery":"~1.10.2",
+    "jquery": "~1.10.2",
     "modernizr": "~2.6.2"
   },
   "author": {
@@ -21,6 +21,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mcoms/jquery-raptorize-coffee.git"
+    "url": "git://github.com/mcoms/jquery-raptorize-coffee.git"
   }
 }
