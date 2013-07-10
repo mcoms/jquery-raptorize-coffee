@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>jquery-raptorize-coffee by mcoms</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">jquery-raptorize-coffee</h1>
+        <p class="header">Inspired by and compatable with ZURB's jQuery Raptorize Plugin, this is a CoffeeScript rewrite compatible with newer jQuery versions.</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/mcoms/jquery-raptorize-coffee/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/mcoms/jquery-raptorize-coffee/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/mcoms/jquery-raptorize-coffee">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/mcoms">mcoms</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a name="wat" class="anchor" href="#wat"><span class="octicon octicon-link"></span></a>Wat?</h1>
+
+<p>Inspired by and compatable with ZURB's jQuery Raptorize Plugin 1.0 (<a href="http://www.ZURB.com/playground">http://www.ZURB.com/playground</a>).  This is an API-compatible re-write of their plugin to support newer jQuery versions.  It's written in <a href="http://coffeescript.org/">CoffeeScript</a>.</p>
+
+<p>Depends upon <a href="http://modernizr.com/">Modernizr</a> with HTML5 Audio detection enabled.</p>
+
+<h1>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h1>
+
+<p>You'll need jQuery, a build of <a href="http://modernizr.com/">Modernizr</a> with HTML5 Audio support and the plugin included to experience raptor awesomeness.</p>
+
+<p>You'll also need the raptor assets in the <code>images</code> and <code>sounds</code> directories.</p>
+
+<h2>
+<a name="basic-web-page" class="anchor" href="#basic-web-page"><span class="octicon octicon-link"></span></a>Basic web page</h2>
+
+<div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Awesome Raptor Powa!<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://code.jquery.com/jquery-latest.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"modernizr.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"build/jquery-raptorize.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+      <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'#raptor-button'</span><span class="p">).</span><span class="nx">raptorize</span><span class="p">();</span>
+      <span class="p">});</span>
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"raptor-button"</span><span class="nt">&gt;</span>Click for Raptor.<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;p&gt;</span>There's more detailed instructions <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/mcoms/jquery-raptorize-coffee"</span><span class="nt">&gt;</span>over on Github<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+
+<h2>
+<a name="advanced-options" class="anchor" href="#advanced-options"><span class="octicon octicon-link"></span></a>Advanced options</h2>
+
+<h3>
+<a name="timer-operation" class="anchor" href="#timer-operation"><span class="octicon octicon-link"></span></a>Timer operation</h3>
+
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+  <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'body'</span><span class="p">).</span><span class="nx">raptorize</span><span class="p">({</span>
+      <span class="s2">"enterOn"</span><span class="o">:</span> <span class="s2">"timer"</span><span class="p">,</span>
+      <span class="s2">"delay"</span><span class="o">:</span> <span class="mi">12000</span> <span class="c1">// 12 seconds.</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+
+<h3>
+<a name="konami-code" class="anchor" href="#konami-code"><span class="octicon octicon-link"></span></a>Konami code</h3>
+
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+  <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'body'</span><span class="p">).</span><span class="nx">raptorize</span><span class="p">({</span>
+      <span class="s2">"enterOn"</span><span class="o">:</span> <span class="s2">"konami-code"</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+
+<h1>
+<a name="building" class="anchor" href="#building"><span class="octicon octicon-link"></span></a>Building</h1>
+
+<p>You'll need <a href="http://coffeescript.org/">CoffeeScript</a> installed.</p>
+
+<pre lang="zsh"><code>coffee --compile --output build/ jquery-raptorize.coffee
+</code></pre>
+
+<p>Using this in production? Just include the <code>jquery-raptorize.coffee</code> file in your asset pipeline. If you don't have one of those, you can build a minified version with <a href="https://github.com/mishoo/UglifyJS2">UglifyJS</a>.</p>
+
+<pre lang="zsh"><code>uglifyjs --comments /license/ --mangle --compress --output build/jquery-raptorize.min.js build/jquery-raptorize.js
+</code></pre>
+
+<h1>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h1>
+
+<p>If you'd like to improve the plugin, or heaven forbid, add unit tests, I'd love to have your contributions.</p>
+
+<ol>
+<li>Fork the project</li>
+<li>Make a topic branch (e.g. "added-raptor-hats")</li>
+<li>Send a pull request</li>
+<li>Run. Raptors move at 10 m/s and they <a href="http://xkcd.com/135/">do not know fear</a>.</li>
+</ol>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
