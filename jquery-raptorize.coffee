@@ -1,5 +1,5 @@
 ###
-jQuery Raptorize Plugin 2.0
+jQuery Raptorize Plugin 2.0.0
 https://github.com/mcoms/jquery-raptorize-coffee
 
 Inspired by and compatable with ZURB's jQuery Raptorize Plugin 1.0 (http://www.ZURB.com/playground)
