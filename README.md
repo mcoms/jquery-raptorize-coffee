@@ -11,50 +11,64 @@ You'll need jQuery, a build of [Modernizr](http://modernizr.com/) with HTML5 Aud
 You'll also need the raptor assets in the `images` and `sounds` directories.
 
 ## Basic web page
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <title>Awesome Raptor Powa!</title>
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="modernizr.js"></script>
-        <script src="build/jquery-raptorize.js"></script>
-        <script type="text/javascript">
-          $(function(){
-            $('#raptor-button').raptorize();
-          });
-        </script>
-      </head>
-      <body>
-        <button id="raptor-button">Click for Raptor.</button>
-        <p>There's more detailed instructions <a href="https://github.com/mcoms/jquery-raptorize-coffee">over on Github</a>.</p>
-      </body>
-    </html>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Awesome Raptor Powa!</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="modernizr.js"></script>
+    <script src="build/jquery-raptorize.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        $('#raptor-button').raptorize();
+      });
+    </script>
+  </head>
+  <body>
+    <button id="raptor-button">Click for Raptor.</button>
+    <p>There's more detailed instructions <a href="https://github.com/mcoms/jquery-raptorize-coffee">over on Github</a>.</p>
+  </body>
+</html>
+```
 
 ## Advanced options
 ### Timer operation
-    <script type="text/javascript">
-      $(function(){
-        $('body').raptorize({
-          "enterOn": "timer",
-          "delay": 12000 // 12 seconds.
-        });
-      });
-    </script>
+```html
+<script type="text/javascript">
+  $(function(){
+    $('body').raptorize({
+      "enterOn": "timer",
+      "delay": 12000 // 12 seconds.
+    });
+  });
+</script>
+```
 
 ### Konami code
-    <script type="text/javascript">
-      $(function(){
-        $('body').raptorize({
-          "enterOn": "konami-code"
-        });
-      });
-    </script>
+```html
+<script type="text/javascript">
+  $(function(){
+    $('body').raptorize({
+      "enterOn": "konami-code"
+    });
+  });
+</script>
+```
 
 # Building
 
 You'll need [CoffeeScript](http://coffeescript.org/) installed.
 
-    coffee --compile --output build/ jquery-raptorize.coffee
+```zsh
+coffee --compile --output build/ jquery-raptorize.coffee
+```
+
+Using this in production? Just include the `jquery-raptorize.coffee` file in your asset pipeline. If you don't have one of those, you can build a minified version with [UglifyJS](https://github.com/mishoo/UglifyJS2).
+
+```zsh
+uglifyjs --comments /license/ --mangle --compress --output build/jquery-raptorize.min.js build/jquery-raptorize.js
+```
 
 # Contributing
 
