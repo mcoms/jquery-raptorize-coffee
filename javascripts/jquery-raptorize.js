@@ -21,8 +21,8 @@ http://www.opensource.org/licenses/mit-license.php
         "delayTime": 5000
       }, options);
       audioSupported = Modernizr.audio;
-      raptorImageMarkup = '<img id="elRaptor" style="display: none" src="/images/raptor.png" />';
-      raptorAudioMarkup = '<audio id="elRaptorShriek" preload="auto"><source src="/sounds/raptor-sound.mp3" /><source src="/sounds/raptor-sound.ogg" /></audio>';
+      raptorImageMarkup = '<img id="elRaptor" style="display: none" src="images/raptor.png" />';
+      raptorAudioMarkup = '<audio id="elRaptorShriek" preload="auto"><source src="sounds/raptor-sound.mp3" /><source src="/sounds/raptor-sound.ogg" /></audio>';
       if (!$('#elRaptor').length) {
         $('body').append(raptorImageMarkup);
       }
