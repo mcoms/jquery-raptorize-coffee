@@ -2,7 +2,9 @@
 
 Inspired by and compatable with ZURB's jQuery Raptorize Plugin 1.0 (http://www.ZURB.com/playground).  This is an API-compatible re-write of their plugin to support newer jQuery versions.  It's written in [CoffeeScript](http://coffeescript.org/).
 
-Depends upon Modernizr with HTML5 Audio detection enabled.
+Depends upon [Modernizr](http://modernizr.com/) with HTML5 Audio detection enabled.
+
+**Demo:** http://mcoms.github.io/jquery-raptorize-coffee
 
 # Usage
 
