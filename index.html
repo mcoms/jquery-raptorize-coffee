@@ -7,23 +7,11 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <style type="text/css">#elRaptor { border-style: none }</style>
     <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="javascripts/modernizr.js"></script>
-    <script src="javascripts/jquery-raptorize.js"></script>
-    
-    <script type="text/javascript">
-      $(function(){
-        $('body').raptorize({ "enterOn": "konami-code" });
-        $('#raptor-button').raptorize();
-      });
-    </script>
   </head>
   <body>
     <div class="wrapper">
@@ -49,11 +37,7 @@
 
 <p>Depends upon <a href="http://modernizr.com/">Modernizr</a> with HTML5 Audio detection enabled.</p>
 
-<p>
-  <strong>Demo:</strong> Try the Konami Code (up up down down left right left right b a) or...
-  <br /><br />
-  <button id="raptor-button">Click for Raptor.</button>
-</p>
+<p><strong>Demo:</strong> <a href="http://mcoms.github.io/jquery-raptorize-coffee">http://mcoms.github.io/jquery-raptorize-coffee</a></p>
 
 <h1>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h1>
@@ -61,6 +45,14 @@
 <p>You'll need jQuery, a build of <a href="http://modernizr.com/">Modernizr</a> with HTML5 Audio support and the plugin included to experience raptor awesomeness.</p>
 
 <p>You'll also need the raptor assets in the <code>images</code> and <code>sounds</code> directories.</p>
+
+<h2>
+<a name="installing-via-bower" class="anchor" href="#installing-via-bower"><span class="octicon octicon-link"></span></a>Installing via Bower</h2>
+
+<p>You can install the package automatically using <a href="http://bower.io/">Bower</a>.</p>
+
+<pre lang="zsh"><code>bower install jquery-raptorize-coffee
+</code></pre>
 
 <h2>
 <a name="basic-web-page" class="anchor" href="#basic-web-page"><span class="octicon octicon-link"></span></a>Basic web page</h2>
@@ -124,6 +116,16 @@
 <p>Using this in production? Just include the <code>jquery-raptorize.coffee</code> file in your asset pipeline. If you don't have one of those, you can build a minified version with <a href="https://github.com/mishoo/UglifyJS2">UglifyJS</a>.</p>
 
 <pre lang="zsh"><code>uglifyjs --comments /license/ --mangle --compress --output build/jquery-raptorize.min.js build/jquery-raptorize.js
+</code></pre>
+
+<h2>
+<a name="using-rake" class="anchor" href="#using-rake"><span class="octicon octicon-link"></span></a>Using Rake</h2>
+
+<p>To build in one step, you can use <a href="http://rake.rubyforge.org/">Rake</a> to run <code>rake build</code>.</p>
+
+<pre lang="zsh"><code>rake build    # Compile and Uglify the JS into the build directory
+rake compile  # Compile the JS into the build directory
+rake uglify   # Uglify the compiled JS in the build directory
 </code></pre>
 
 <h1>
