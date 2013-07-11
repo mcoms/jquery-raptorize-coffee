@@ -1,7 +1,7 @@
 {
   "name": "jquery-raptorize-coffee",
   "description": "Inspired by and compatable with ZURB's jQuery Raptorize Plugin, this is a CoffeeScript rewrite compatible with newer jQuery versions.",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "jquery-raptorize.coffee",
   "ignore": [
     "**/.*",

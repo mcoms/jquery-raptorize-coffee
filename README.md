@@ -80,6 +80,16 @@ Using this in production? Just include the `jquery-raptorize.coffee` file in you
 uglifyjs --comments /license/ --mangle --compress --output build/jquery-raptorize.min.js build/jquery-raptorize.js
 ```
 
+## Using Rake
+
+To build in one step, you can use [Rake](http://rake.rubyforge.org/) to run `rake build`.
+
+```zsh
+rake build    # Compile and Uglify the JS into the build directory
+rake compile  # Compile the JS into the build directory
+rake uglify   # Uglify the compiled JS in the build directory
+```
+
 # Contributing
 
 If you'd like to improve the plugin, or heaven forbid, add unit tests, I'd love to have your contributions.

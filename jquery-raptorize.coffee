@@ -1,5 +1,5 @@
 ###
-jQuery Raptorize Plugin 2.0.0
+jQuery Raptorize Plugin 2.0.1
 https://github.com/mcoms/jquery-raptorize-coffee
 
 Inspired by and compatable with ZURB's jQuery Raptorize Plugin 1.0 (http://www.ZURB.com/playground)
@@ -41,26 +41,30 @@ http://www.opensource.org/licenses/mit-license.php
         animate() if arraysEqual(pressedKeys[-(konamiCode.length)..], konamiCode)
       )
 
+    locked = false
     animate = ->
-      $('#elRaptorShriek').get(0).play() if audioSupported
-      $(window).unbind('keydown.raptorz') if settings['enterOn'] is 'konami-code'
-      raptor.animate({
-        "bottom": "0"
-      }, ->
-        $(this).animate({
-          "bottom": "-130px"
-        }, 100, ->
-          offset = (($(this).position().left)+400)
-          $(this).delay(300).animate({
-            "right": offset
-          }, 2200, ->
-            raptor = $('#elRaptor').css({
-              "bottom": "-700px",
-              "right": "0"
-            })
+      unless locked
+        locked = true
+        $('#elRaptorShriek').get(0).play() if audioSupported
+        $(window).unbind('keydown.raptorz') if settings['enterOn'] is 'konami-code'
+        raptor.animate({
+          "bottom": "0"
+        }, ->
+          $(this).animate({
+            "bottom": "-130px"
+          }, 100, ->
+            offset = (($(this).position().left)+400)
+            $(this).delay(300).animate({
+              "right": offset
+            }, 2200, ->
+              raptor = $('#elRaptor').css({
+                "bottom": "-700px",
+                "right": "0"
+              })
+              locked = false
+            )
           )
         )
-      )
 
     setTimeout(animate, settings['delayTime']) if settings['enterOn'] is 'timer'
     watchForKonami() if settings['enterOn'] is 'konami-code'
