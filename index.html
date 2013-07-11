@@ -12,6 +12,18 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <style type="text/css">#elRaptor { border-style: none }</style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="javascripts/modernizr.js"></script>
+    <script src="javascripts/jquery-raptorize.js"></script>
+  
+    <script type="text/javascript">
+      $(function(){
+        $('body').raptorize({ "enterOn": "konami-code" });
+        $('#raptor-button').raptorize();
+      });
+    </script>
   </head>
   <body>
     <div class="wrapper">
@@ -37,7 +49,11 @@
 
 <p>Depends upon <a href="http://modernizr.com/">Modernizr</a> with HTML5 Audio detection enabled.</p>
 
-<p><strong>Demo:</strong> <a href="http://mcoms.github.io/jquery-raptorize-coffee">http://mcoms.github.io/jquery-raptorize-coffee</a></p>
+<p>
+  <strong>Demo:</strong> Try the Konami Code (up up down down left right left right b a) or...
+  <br /><br />
+  <button id="raptor-button">Click for Raptor.</button>
+</p>
 
 <h1>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h1>
