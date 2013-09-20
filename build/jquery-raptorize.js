@@ -46,6 +46,9 @@ http://www.opensource.org/licenses/mit-license.php
         konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
         return $(window).bind('keydown.raptorz', function(e) {
           pressedKeys.push(e.which);
+          while (pressedKeys.length > konamiCode.length) {
+            pressedKeys.shift();
+          }
           if (arraysEqual(pressedKeys.slice(-konamiCode.length), konamiCode)) {
             return animate();
           }
