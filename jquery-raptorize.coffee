@@ -31,13 +31,14 @@ http://www.opensource.org/licenses/mit-license.php
 
     # Thanks to http://stackoverflow.com/questions/11142666/is-there-an-idiomatic-way-to-test-array-equality-in-coffeescript
     arraysEqual = (array1, array2) ->
-      array1.length is array2.length and array1.every (e,i) -> e is array2[i] 
+      array1.length is array2.length and array1.every (e,i) -> e is array2[i]
 
     watchForKonami = ->
       pressedKeys = []
       konamiCode = [38,38,40,40,37,39,37,39,66,65]
       $(window).bind('keydown.raptorz', (e) ->
         pressedKeys.push e.which
+        pressedKeys.shift() while pressedKeys.length > konamiCode.length
         animate() if arraysEqual(pressedKeys[-(konamiCode.length)..], konamiCode)
       )
 
