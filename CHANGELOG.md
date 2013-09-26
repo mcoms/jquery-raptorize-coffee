@@ -1,3 +1,9 @@
+## 2.0.2 (2013-09-25)
+
+Bugfixes:
+
+ * Limit the Konami Code buffer to store the last _n_ characters. Since the Konami Code buffer stored every key press, it could get needlessly large on sites where users typed lots per request. Fix thanks to [stem](https://github.com/mcoms/jquery-raptorize-coffee/pull/1).
+
 ## 2.0.1 (2013-07-11)
 
 Features:
